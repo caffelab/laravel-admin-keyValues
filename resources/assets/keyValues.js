@@ -26,61 +26,66 @@
                 //this.warp.find('#selector').append(this.options);
                 this.warp.find('#selector1').append(this.options);
             }
-           // console.log($(".Js_sku_input").val())
-            if($(".Js_sku_input").val()!==""||$(".Js_sku_input").val()===null){
+           console.log($(".Js_sku_input").val())
+            if($(".Js_sku_input").val()!==""||$(".Js_sku_input").val()!==null||$(".Js_sku_input").val()!=='null'){
                 data = JSON.parse($('.Js_sku_input').val())
                 this.attrs = data
-                console.log(data)
-                for(var i=0;i<data.length;i++){
-                    if(i===0) {
-                        console.log(data[0].skey)
-                        $('.tbody_1 .guige').find("input[name='skey']").val(data[0].skey)//规格
-                        $('.tbody_1 .guige').find("input[name='sort']").val(data[0].sort)//排序
-                        $('.tbody_1 .guige').find("input[name='market_price']").val(data[0].market_price)//结算价
-                        $('.tbody_1 .guige').find("input[name='vprice']").val(data[0].vprice)//订购价
-                        $('.tbody_1 .guige').find("input[name='sprice']").val(data[0].sprice)//零售价
-                        $('.tbody_1 .guige').find("input[name='lirun']").val(data[0].sprice)//利润
-                        $('.tbody_1 .guige').find("input[name='store']").val(data[0].store)//库存
-                        $(".tbody_1 .guide").find("input[name='img__1']").val(data[0].img)//图片
-                        if(data[0].fenrun!=undefined){
-                            for(var j = 0;j<data[0].fenrun.length;j++){
-                                if(j==0){
-                                    $("#selector1").val(data[0].fenrun[j].id)
-                                    $("#selector1").parent().next().find("input").val(data[0].fenrun[j].fenrun)
-                                }else{
-                                    $("#selector1").parent().parent().find("span.add-item").trigger("click")
-                                    $(".children-table tbody tr").eq(j+1).find("select").val(data[0].fenrun[j].id)
-                                    $(".children-table tbody tr").eq(j+1).find("input").val(data[0].fenrun[j].fenrun)
+                if(data===null){
+
+                }else{
+                    for(var i=0;i<data.length;i++){
+                        if(i===0) {
+                            console.log(data[0].skey)
+                            $('.tbody_1 .guige').find("input[name='skey']").val(data[0].skey)//规格
+                            $('.tbody_1 .guige').find("input[name='sort']").val(data[0].sort)//排序
+                            $('.tbody_1 .guige').find("input[name='market_price']").val(data[0].market_price)//结算价
+                            $('.tbody_1 .guige').find("input[name='vprice']").val(data[0].vprice)//订购价
+                            $('.tbody_1 .guige').find("input[name='sprice']").val(data[0].sprice)//零售价
+                            $('.tbody_1 .guige').find("input[name='lirun']").val(data[0].sprice)//利润
+                            $('.tbody_1 .guige').find("input[name='store']").val(data[0].store)//库存
+                            $(".tbody_1 .guide").find("input[name='img__1']").val(data[0].img)//图片
+                            if(data[0].fenrun!=undefined){
+                                for(var j = 0;j<data[0].fenrun.length;j++){
+                                    if(j==0){
+                                        $("#selector1").val(data[0].fenrun[j].id)
+                                        $("#selector1").parent().next().find("input").val(data[0].fenrun[j].fenrun)
+                                    }else{
+                                        $("#selector1").parent().parent().find("span.add-item").trigger("click")
+                                        $(".children-table tbody tr").eq(j+1).find("select").val(data[0].fenrun[j].id)
+                                        $(".children-table tbody tr").eq(j+1).find("input").val(data[0].fenrun[j].fenrun)
+                                    }
                                 }
                             }
-                        }
-                    }else{
-                        let html = '<tr class="guige"><td><input type="text" class="form-control" name="skey" value="'+data[i].skey+'"></td><td><input type="number" class="form-control" name="sort" value="'+data[i].sort+'"/></td>'+
-                        '<td><input type="number" class="form-control" name="market_price" value="'+data[i].market_price+'"/></td><td><input type="number" class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
-                        '<td><input type="number" class="form-control" name="sprice" value="'+data[i].sprice+'"/></td><td><input type="number" class="form-control" name="lirun" value="'+data[i].lirun+'"/></td>'+
-                        '<td><input type="number" class="form-control" name="store" value="'+data[i].store+'"/></td>'+
-                        '<td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
-                        '<td>'+
-                            '<span class="btn btn-danger Js_remove_attr_name">移除</span>'+
-                        '</td>'+'<tr><td colspan="9"><table class="table children-table"><tr><th width="150px">单位</th><th width="150px">分润</th><th width="200px">操作</th></tr>'
-                            +'<tr><td><select class="form-control first-select" >'+this.options+'</select></td><td><input class="form-control" name="bili"/></td><td><span class="btn btn-success add-item">新增</span></td></tr></table></td></tr>'
-                        '</tr>';
-                        this.warp.find('.tbody_1').append(html)
-                        var next = $(".guige").eq(i).next().find("tbody tr")
-                        if(data[i].fenrun!=undefined){
-                            for(var j = 0;j<data[i].fenrun.length;j++){
-                                if(j==0){
-                                    next.eq(j+1).find("select").val(data[i].fenrun[j].id)
-                                    next.eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
-                                }else{
-                                    next.eq(1).find("span.add-item").trigger("click")
-                                    $(".guige").eq(i).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
-                                    $(".guige").eq(i).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
+                        }else{
+                            let html = '<tr class="guige"><td><input type="text" class="form-control" name="skey" value="'+data[i].skey+'"></td><td><input type="number" class="form-control" name="sort" value="'+data[i].sort+'"/></td>'+
+                                '<td><input type="number" class="form-control" name="market_price" value="'+data[i].market_price+'"/></td><td><input type="number" class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
+                                '<td><input type="number" class="form-control" name="sprice" value="'+data[i].sprice+'"/></td><td><input type="number" class="form-control" name="lirun" value="'+data[i].lirun+'"/></td>'+
+                                '<td><input type="number" class="form-control" name="store" value="'+data[i].store+'"/></td>'+
+                                '<td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
+                                '<td>'+
+                                '<span class="btn btn-danger Js_remove_attr_name">移除</span>'+
+                                '</td>'+'<tr><td colspan="9"><table class="table children-table"><tr><th width="150px">单位</th><th width="150px">分润</th><th width="200px">操作</th></tr>'
+                                +'<tr><td><select class="form-control first-select" >'+this.options+'</select></td><td><input class="form-control" name="bili"/></td><td><span class="btn btn-success add-item">新增</span></td></tr></table></td></tr>'
+                            '</tr>';
+                            this.warp.find('.tbody_1').append(html)
+                            var next = $(".guige").eq(i+1).next().find("tbody tr")
+                            if(data[i].fenrun!=undefined){
+                                for(var j = 0;j<data[i].fenrun.length;j++){
+                                    if(j==0){
+                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
+                                        console.log($(".guige").eq(i+1).next().find("tbody tr").eq(j+1))
+                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
+                                    }else{
+                                        $(".guige").eq(i+1).next().find("tbody tr").eq(1).find("span.add-item").trigger("click")
+                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
+                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
+                                    }
                                 }
                             }
                         }
                     }
                 }
+
             }
         });
         this.init();
@@ -102,7 +107,7 @@
         //         } else if (_dom.hasClass('Js_many_btn')) {
         //             // 点击了多规格
         //             // 显示多规格编辑DOM
-        //             _this.warp.find('.sku_attr_key_val,.sku_edit_warp').show();
+        //             _this.warp.find('.sku_attr_key_val,.sku_edit_warp').Js_sku_input();
         //         }
         //     }
         //     _this.processSku()
@@ -207,10 +212,7 @@
         let _this = this;
         let sku_json = {};
         sku_json.type = _this.warp.find('.sku_attr_select .btn.btn-success').attr('data-type');
-       
-        if (sku_json.type === 'many') {
-            _this.warp.find(".sku_attr_key_val").show();
-            _this.warp.find(".sku_attr_single").hide();
+
             // 多规格
             sku_json.attrs = _this.attrs;
             console.log("多规格")
@@ -239,38 +241,23 @@
            })
            sku_json = sku
            console.log(sku_json)
-            // let sku = [];
-            // _this.warp.find('.sku_edit_warp tbody tr').each(function () {
-            //     let tr = $(this);
-            //     let item_sku = {};
-            //     tr.find('td[data-field]').each(function () {
-            //         let td = $(this);
-            //         let field = td.attr('data-field');
-            //         let input = td.find('input');
-            //         if (input.length) {
-            //             item_sku[field] = input.val();
-            //         } else {
-            //             item_sku[field] = td.text();
-            //         }
-            //     });
-            //     sku.push(item_sku);
-            // });
-            //sku_json.sku = sku;
-        }else{
-            _this.warp.find(".sku_attr_key_val").show();
-            _this.warp.find(".sku_attr_single").hide();
-            var arr = []
-            
-            sku_json.fenrun = [];
-            $(this).next().find("table tr:gt(0)").each(function(k,i){
-                var fenrun = new Object;
-               fenrun.id = $(i).find("select option:selected").val()//选择分成对象
-               fenrun.fenrun = $(i).find("input[name='bili']").val()
-               console.log(fenrun)
-               sku.fenrun.push(fenrun)
-               console.log("完成",obj.fenrun)
-           })
-        }
+            _this.warp.find('.sku_edit_warp tbody tr').each(function () {
+                let tr = $(this);
+                let item_sku = {};
+                tr.find('td[data-field]').each(function () {
+                    let td = $(this);
+                    let field = td.attr('data-field');
+                    let input = td.find('input');
+                    if (input.length) {
+                        item_sku[field] = input.val();
+                    } else {
+                        item_sku[field] = td.text();
+                    }
+                });
+                sku.push(item_sku);
+            });
+            sku_json.sku = sku;
+
         _this.warp.find('.Js_sku_input').val(JSON.stringify(sku_json));
     };
 
