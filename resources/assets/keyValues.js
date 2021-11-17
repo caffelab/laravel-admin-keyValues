@@ -41,7 +41,7 @@
                         $('.tbody_1 .guige').find("input[name='sprice']").val(data[0].sprice)//零售价
                         $('.tbody_1 .guige').find("input[name='lirun']").val(data[0].sprice)//利润
                         $('.tbody_1 .guige').find("input[name='store']").val(data[0].store)//库存
-                        $(".tbody_1 .guide").find("input[name='img']").val(data[0].img)//图片
+                        $(".tbody_1 .guide").find("input[name='img__1']").val(data[0].img)//图片
                         if(data[0].fenrun!=undefined){
                             for(var j = 0;j<data[0].fenrun.length;j++){
                                 if(j==0){
@@ -59,7 +59,7 @@
                         '<td><input type="number" class="form-control" name="market_price" value="'+data[i].market_price+'"/></td><td><input type="number" class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
                         '<td><input type="number" class="form-control" name="sprice" value="'+data[i].sprice+'"/></td><td><input type="number" class="form-control" name="lirun" value="'+data[i].lirun+'"/></td>'+
                         '<td><input type="number" class="form-control" name="store" value="'+data[i].store+'"/></td>'+
-                        '<td ><input name="img" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
+                        '<td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
                         '<td>'+
                             '<span class="btn btn-danger Js_remove_attr_name">移除</span>'+
                         '</td>'+'<tr><td colspan="9"><table class="table children-table"><tr><th width="150px">单位</th><th width="150px">分润</th><th width="200px">操作</th></tr>'
@@ -139,7 +139,7 @@
                     '<td><input type="number" class="form-control" name="market_price"/></td><td><input type="number" class="form-control" name="vprice"/></td>'+
                     '<td><input type="number" class="form-control" name="sprice"/></td><td><input type="number" class="form-control" name="lirun"/></td>'+
                     '<td><input type="number" class="form-control" name="store"/></td>'+
-                    '<td ><input name="img" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
+                    '<td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
                 '<td>'+
                     '<span class="btn btn-danger Js_remove_attr_name">移除</span>'+
                 '</td>'+'<tr><td colspan="9"><table class="table children-table"><tr><th width="150px">单位</th><th width="150px">分润</th><th width="200px">操作</th></tr>'
@@ -224,7 +224,7 @@
                obj.sprice = $(item).find("input[name='sprice']").val()//零售价
                obj.lirun = $(item).find("input[name='lirun']").val()//利润
                obj.store = $(item).find("input[name='store']").val()//库存
-               obj.img = $(item).find("input[name='img']").val()//图片
+               obj.img = $(item).find("input[name='img__1']").val()//图片
                obj.fenrun = [];
                $(this).next().find("table tr:gt(0)").each(function(k,i){
                     var fenrun = new Object;
