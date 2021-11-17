@@ -6,8 +6,8 @@
     <div class="{{$viewClass['field']}}">
 
         <div class="sku_warp {{$class}}">
-            <input  class="Js_sku_input" name="{{$name}}" value="{{ old($column,json_encode($value)) }}">
-            <div class="sku_attr_select">
+            <input hidden  class="Js_sku_input" name="{{$name}}" value="{{ old($column,json_encode($value)) }}">
+            <div class="sku_attr_select" hidden>
                 <span class="btn btn-default Js_many_btn" data-type="many">多规格</span>
             </div>
             <div class="sku_attr_key_val" >
