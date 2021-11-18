@@ -1,6 +1,6 @@
 (function () {
     // 上传地址
-    const UploadHost = '/admin/upload_file';
+    const UploadHost = '/api/index/zhcs_upload';
 
     function SKU(warp) {
         this.warp = $(warp);
@@ -289,8 +289,8 @@
                 },
                 processData: false, //告诉jQuery不要去处理发送的数据
                 success: function (res) {
-                    obj.css('background-image','url('+res.url+')');
-                    obj.parent().find('input').val(res.url);
+                    obj.css('background-image','url('+res+')');
+                    obj.parent().find('input').val(res);
                     _this.processSku()
                 }
             })
