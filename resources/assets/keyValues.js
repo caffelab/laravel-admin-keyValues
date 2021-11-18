@@ -74,7 +74,7 @@
                                     if(j==0){
                                         $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
                                         console.log("1111>>>>>>")
-                                        console.log($(".guige").eq(i+1).next().find("tbody tr"));
+                                        console.log($(".guige").eq(i+1));
                                         $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
                                     }else{
                                         $(".guige").eq(i+1).next().find("tbody tr").eq(1).find("span.add-item").trigger("click")
