@@ -72,14 +72,14 @@
                             if(data[i].fenrun!=undefined){
                                 for(var j = 0;j<data[i].fenrun.length;j++){
                                     if(j==0){
-                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
+                                        $(".guige").eq(i).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
                                         console.log("1111>>>>>>")
                                         console.log($(".guige").eq(i));
-                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
+                                        $(".guige").eq(i).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
                                     }else{
-                                        $(".guige").eq(i+1).next().find("tbody tr").eq(1).find("span.add-item").trigger("click")
-                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
-                                        $(".guige").eq(i+1).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
+                                        $(".guige").eq(i).next().find("tbody tr").eq(1).find("span.add-item").trigger("click")
+                                        $(".guige").eq(i).next().find("tbody tr").eq(j+1).find("select").val(data[i].fenrun[j].id)
+                                        $(".guige").eq(i).next().find("tbody tr").eq(j+1).find("input").val(data[i].fenrun[j].fenrun)
                                     }
                                 }
                             }
