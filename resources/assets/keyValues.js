@@ -41,7 +41,7 @@
                             $('.tbody_1 .guige').find("input[name='market_price']").val(data[0].market_price)//结算价
                             $('.tbody_1 .guige').find("input[name='vprice']").val(data[0].vprice)//订购价
                             $('.tbody_1 .guige').find("input[name='sprice']").val(data[0].sprice)//零售价
-                            $('.tbody_1 .guige').find("input[name='lirun']").val(data[0].sprice)//利润
+                            $('.tbody_1 .guige').find("input[name='lirun']").val(data[0].lirun)//利润
                             $('.tbody_1 .guige').find("input[name='store']").val(data[0].store)//库存
                             $(".tbody_1 .guide").find("input[name='img__1']").val(data[0].img)//图片
                             if(data[0].fenrun!=undefined){
