@@ -38,7 +38,7 @@
                             console.log(data[0].skey)
                             $('.tbody_1 .guige').find("input[name='skey']").val(data[0].skey)//规格
                             $('.tbody_1 .guige').find("input[name='sort']").val(data[0].sort)//排序
-                            $('.tbody_1 .guige').find("input[name='market_price']").val(data[0].market_price)//结算价
+                            $('.tbody_1 .guige').find("input[name='m_price']").val(data[0].market_price)//结算价
                             $('.tbody_1 .guige').find("input[name='vprice']").val(data[0].vprice)//订购价
                             $('.tbody_1 .guige').find("input[name='sprice']").val(data[0].sprice)//零售价
                             $('.tbody_1 .guige').find("input[name='lirun']").val(data[0].lirun)//利润
@@ -58,7 +58,7 @@
                             }
                         }else{
                             let html = '<tr class="guige"><td><input type="text" class="form-control" name="skey" value="'+data[i].skey+'"></td><td><input class="form-control" name="sort" value="'+data[i].sort+'"/></td>'+
-                                '<td><input class="form-control" name="market_price" value="'+data[i].market_price+'"/></td><td><input class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
+                                '<td><input class="form-control" name="m_price" value="'+data[i].market_price+'"/></td><td><input class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
                                 '<td><input class="form-control" name="sprice" value="'+data[i].sprice+'"/></td><td><input class="form-control" name="lirun" value="'+data[i].lirun+'"/></td>'+
                                 '<td><input class="form-control" name="store" value="'+data[i].store+'"/></td>'+
                                 '<td ><input name="img__1" value="'+data[i].img+'" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
@@ -142,7 +142,7 @@
             //     '</td>' +
             //     '</tr>';
                 let html = '<tr class="guige"><td><input type="text" class="form-control" name="skey"></td><td><input type="number" class="form-control" name="sort"/></td>'+
-                    '<td><input type="number" class="form-control" name="market_price"/></td><td><input type="number" class="form-control" name="vprice"/></td>'+
+                    '<td><input type="number" class="form-control" name="m_price"/></td><td><input type="number" class="form-control" name="vprice"/></td>'+
                     '<td><input type="number" class="form-control" name="sprice"/></td><td><input type="number" class="form-control" name="lirun"/></td>'+
                     '<td><input type="number" class="form-control" name="store"/></td>'+
                     '<td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
@@ -222,7 +222,7 @@
                var obj = new Object;
                obj.skey = $(item).find("input[name='skey']").val()//规格
                obj.sort = $(item).find("input[name='sort']").val()//排序
-               obj.market_price = $(item).find("input[name='market_price']").val()//结算价
+               obj.market_price = $(item).find("input[name='m_price']").val()//结算价
                obj.vprice = $(item).find("input[name='vprice']").val()//订购价
                obj.sprice = $(item).find("input[name='sprice']").val()//零售价
                obj.lirun = $(item).find("input[name='lirun']").val()//利润

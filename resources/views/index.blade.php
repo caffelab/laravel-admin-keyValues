@@ -29,7 +29,7 @@
                         <tr class='guige'>
                             <td><input  class="form-control" name="skey"></td>
                             <td><input  class="form-control" name="sort"/></td>
-                            <td><input class="form-control" name="market_price"/></td>
+                            <td><input class="form-control" name="m_price"/></td>
                             <td><input class="form-control" name="vprice"/></td>
                             <td><input class="form-control" name="sprice"/></td>
                             <td><input  class="form-control" name="lirun"/></td>
