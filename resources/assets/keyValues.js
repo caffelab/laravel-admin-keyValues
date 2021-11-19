@@ -58,9 +58,9 @@
                             }
                         }else{
                             let html = '<tr class="guige"><td><input type="text" class="form-control" name="skey" value="'+data[i].skey+'"></td><td><input type="number" class="form-control" name="sort" value="'+data[i].sort+'"/></td>'+
-                                '<td><input type="number" class="form-control" name="market_price" value="'+data[i].market_price+'"/></td><td><input type="number" class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
-                                '<td><input type="number" class="form-control" name="sprice" value="'+data[i].sprice+'"/></td><td><input type="number" class="form-control" name="lirun" value="'+data[i].lirun+'"/></td>'+
-                                '<td><input type="number" class="form-control" name="store" value="'+data[i].store+'"/></td>'+
+                                '<td><input class="form-control" name="market_price" value="'+data[i].market_price+'"/></td><td><input type="number" class="form-control" name="vprice" value="'+data[i].vprice+'"/></td>'+
+                                '<td><input class="form-control" name="sprice" value="'+data[i].sprice+'"/></td><td><input type="number" class="form-control" name="lirun" value="'+data[i].lirun+'"/></td>'+
+                                '<td><input class="form-control" name="store" value="'+data[i].store+'"/></td>'+
                                 '<td ><input name="img__1" value="'+data[i].img+'" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>'+
                                 '<td>'+
                                 '<span class="btn btn-danger Js_remove_attr_name">移除</span>'+

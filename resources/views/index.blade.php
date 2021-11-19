@@ -27,12 +27,12 @@
                     </thead>
                     <tbody class="tbody_1">
                         <tr class='guige'>
-                            <td><input type="text" class="form-control" name="skey"></td>
-                            <td><input type="number" class="form-control" name="sort"/></td>
-                            <td><input type="number" class="form-control" name="market_price"/></td>
-                            <td><input type="number" class="form-control" name="vprice"/></td>
-                            <td><input type="number" class="form-control" name="sprice"/></td>
-                            <td><input type="number" class="form-control" name="lirun"/></td>
+                            <td><input  class="form-control" name="skey"></td>
+                            <td><input  class="form-control" name="sort"/></td>
+                            <td><input class="form-control" name="market_price"/></td>
+                            <td><input class="form-control" name="vprice"/></td>
+                            <td><input class="form-control" name="sprice"/></td>
+                            <td><input  class="form-control" name="lirun"/></td>
                             <td><input type="number" class="form-control" name="store"/></td>
                             <td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>
                             <td>
