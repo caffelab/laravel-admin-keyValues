@@ -33,7 +33,7 @@
                             <td><input class="form-control" name="vprice"/></td>
                             <td><input class="form-control" name="sprice"/></td>
                             <td><input  class="form-control" name="lirun"/></td>
-                            <td><input type="number" class="form-control" name="store"/></td>
+                            <td><input class="form-control" name="store"/></td>
                             <td ><input name="img__1" value="" type="hidden" class="form-control"><span class="sku_upload">+</span><span class="uploadimg_del">清空</span></td>
                             <td>
                                 <span class="btn btn-success Js_add_attr_name">添加</span>
