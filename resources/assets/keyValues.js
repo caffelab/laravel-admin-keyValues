@@ -259,7 +259,7 @@
             });
             sku_json.sku = sku;
 
-        _this.warp.find('.Js_sku_input').val(JSON.stringify(sku_json));
+        _this.warp.find('.Js_sku_input').val(JSON.stringify(sku));
     };
 
     // 图片上传
