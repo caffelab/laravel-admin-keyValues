@@ -212,10 +212,10 @@
     SKU.prototype.processSku = function () {
         let _this = this;
         let sku_json = {};
-        sku_json.type = _this.warp.find('.sku_attr_select .btn.btn-success').attr('data-type');
+       // sku_json.type = _this.warp.find('.sku_attr_select .btn.btn-success').attr('data-type');
 
             // 多规格
-            sku_json.attrs = _this.attrs;
+          //  sku_json.attrs = _this.attrs;
             console.log("多规格")
             var sku = []
            _this.warp.find(".guige").each(function(index,item){
