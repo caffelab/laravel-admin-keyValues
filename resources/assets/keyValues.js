@@ -117,6 +117,7 @@
         // 绑定属性值移除事件
         _this.warp.find('.sku_attr_key_val').on('click', '.Js_remove_attr_val', function () {
             $(this).parent('.sku_attr_val_item').remove();
+            _this.processSku()
             _this.getSkuAttr();
         });
 
@@ -160,6 +161,7 @@
             console.log('移除属性名');
             $(this).parents('tr').next().remove()
             $(this).parents('tr').remove();
+            _this.processSku()
             _this.getSkuAttr()
         });
 
@@ -173,6 +175,7 @@
         _this.warp.on("click",'.item-remove',function(){
             console.log("删除")
             $(this).parent().parent().remove()
+            _this.processSku();
         })
         // 绑定input变化事件
         _this.warp.find('.table-bordered tbody').on('change', 'input', _this.processSku.bind(_this));

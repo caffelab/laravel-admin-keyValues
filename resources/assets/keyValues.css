@@ -28,6 +28,7 @@
 .sku_warp .sku_attr_val_item .btn{
     float: left;
     border-radius: 0 !important;
+    color:red;
 }
 
 .sku_warp .sku_edit_warp .Js_sku_upload{
